@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 06:15:07 by randre            #+#    #+#             */
-/*   Updated: 2023/09/16 22:21:10 by randre           ###   ########.fr       */
+/*   Created: 2023/09/17 01:45:30 by randre            #+#    #+#             */
+/*   Updated: 2023/09/17 01:45:30 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memset(void	*str, int c, size_t n)
 {
-	int	i;
+	unsigned int    i;
 
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)str)[i] = c;
+		((unsigned char *)str)[i] = (unsigned char)c;
 		i++;
 	}
 	return (str);

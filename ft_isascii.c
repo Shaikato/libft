@@ -6,11 +6,11 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:14:55 by randre            #+#    #+#             */
-/*   Updated: 2023/09/15 06:15:14 by randre           ###   ########.fr       */
+/*   Updated: 2023/09/17 02:02:26 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isasci(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

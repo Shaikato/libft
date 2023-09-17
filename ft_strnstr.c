@@ -18,14 +18,14 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
     char    *occ;
     size_t  i;
 
-    start = little; 
+    start = (char *)little; 
     while (*big)
     {
         i = len;
         little = start;
         if (*big == *little)
         {
-            occ = big;
+            occ = (char *)big;
             while (*big == *little && i--)
             {
                 big++;

@@ -20,7 +20,7 @@ char    *ft_strrchr(const char *str, int c)
     while (*str)
     {
         if (*str == ch)
-            occ = str;
+            occ = (char *)str;
         str++;
     }
     if (occ != NULL)

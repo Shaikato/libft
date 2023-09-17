@@ -6,11 +6,11 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:14:58 by randre            #+#    #+#             */
-/*   Updated: 2023/09/15 06:18:15 by randre           ###   ########.fr       */
+/*   Updated: 2023/09/17 02:03:13 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
