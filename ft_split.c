@@ -79,7 +79,7 @@ static char	**ft_lp(char const *s, char c, unsigned int i, char **pt)
 			s++;
 			y++;
 		}
-		while (*s == c)
+		while (*s == c && *s) 
 			s++;
 		j++;
 	}
@@ -93,7 +93,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	while (*s == c)
+	while (*s == c && *s)
 		s++;
 	i = ft_word_count(s, c);
 	ptr = ft_calloc(i + 1, sizeof(char *));
