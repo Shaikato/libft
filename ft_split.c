@@ -83,12 +83,12 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
+	while (*s == c)
+		s++;
 	i = ft_word_count(s, c);
 	ptr = ft_calloc(i + 1, sizeof(char *));
 	if (!ptr)
 		return (NULL);
-	while (*s == c)
-		s++;
 	ptr = ft_lp(s, c, i, ptr);
 	return (ptr);
 }
