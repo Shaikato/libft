@@ -12,7 +12,6 @@
 
 #include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 void    *ft_calloc(size_t nitems, size_t size)
 {

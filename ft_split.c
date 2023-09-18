@@ -51,21 +51,21 @@ static char	**ft_free_all(char **ptr)
 	return (NULL);
 }
 
-static char	**ft_loop(char const *s, char c, int i, char **ptr)
+static char	**ft_lp(char const *s, char c, unsigned int i, char **pt)
 {
 	unsigned int	y;
-	int				j;
+	unsigned int	j;
 
 	j = 0;
 	while (j < i)
 	{
 		y = 0;
-		ptr[j] = ft_calloc(ft_wordlen(s, c) + 1, sizeof(char));
-		if (!ptr[j])
-			return (ft_free_all(ptr));
+		pt[j] = ft_calloc(ft_wordlen(s, c) + 1, sizeof(char));
+		if (!pt[j])
+			return (ft_free_all(pt));
 		while (ft_wordlen(s, c))
 		{
-			ptr[j][y] = *s;
+			pt[j][y] = *s;
 			s++;
 			y++;
 		}
@@ -73,13 +73,13 @@ static char	**ft_loop(char const *s, char c, int i, char **ptr)
 			s++;
 		j++;
 	}
-	return (ptr);
+	return (pt);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char			**ptr;
-	int				i;
+	unsigned int	i;
 
 	if (!s)
 		return (NULL);	
@@ -89,6 +89,6 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (*s == c)
 		s++;
-	ptr = ft_loop(s, c, i, ptr);
+	ptr = ft_lp(s, c, i, ptr);
 	return (ptr);
 }
