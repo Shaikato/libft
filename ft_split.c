@@ -20,7 +20,7 @@ static unsigned int	ft_word_count(char const *s, char c)
 	while (*s == c)
 		s++;
 	if (*s)
-		i = 1;
+		i = 0;
 	else
 		i = 0;
 	while (*s)
