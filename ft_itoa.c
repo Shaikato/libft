@@ -27,7 +27,7 @@ static int	ft_nbrlen(int n)
 	return (i + 1);
 }
 
-char	*ft_min_handle(void)
+static char	*ft_min_handle(void)
 {
 	char	*str;
 
@@ -45,6 +45,16 @@ char	*ft_min_handle(void)
 	str[10] = '8';
 	str[11] = 0;
 	return (str);
+}
+
+static void	ft_loop(unsigned int len, unsigned int i, char *str)
+{
+	while (len > i)
+	{
+		str[len - 1] = (char)((n % 10) + 48);
+		n /= 10;
+		len--;
+	}
 }
 
 char	*ft_itoa(int n)
@@ -68,12 +78,7 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		n = -n;
 	}
+	ft_loop(len, i, str);
 	str[len] = 0;
-	while (len > i)
-	{
-		str[len - 1] = (char)((n % 10) + 48);
-		n /= 10;
-		len--;
-	}
 	return (str);
 }
