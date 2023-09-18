@@ -34,6 +34,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			if (!(i--))
 				return (occ);
 		}
+		else
+			big++;
 	}
 	return (NULL);
 }
