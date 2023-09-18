@@ -18,8 +18,6 @@ char	*ft_strrchr(const char *str, int c)
 	char	*occ;
 
 	ch = (char)c;
-	if (!str)
-		return (NULL);
 	while (*str)
 	{
 		if (*str == ch)
