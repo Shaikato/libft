@@ -93,6 +93,8 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
+	if (*s == '\0' || c == '\0')
+		return (NULL);
 	while (*s == c)
 		s++;
 	i = ft_word_count(s, c);
