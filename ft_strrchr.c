@@ -12,19 +12,20 @@
 
 #include <stddef.h>
 
-char    *ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-    unsigned char   ch;
-    char            *occ;
-    ch = (unsigned char)c;
-    while (*str)
-    {
-        if (*str == ch)
-            occ = (char *)str;
-        str++;
-    }
-    if (occ != NULL)
-        return (occ);
-    else
-        return (NULL);
+	unsigned char	ch;
+	char			*occ;
+
+	ch = (unsigned char)c;
+	while (*str)
+	{
+		if (*str == ch)
+			occ = (char *)str;
+		str++;
+	}
+	if (occ != NULL)
+		return (occ);
+	else
+		return (NULL);
 }

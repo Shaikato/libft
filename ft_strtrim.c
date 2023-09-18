@@ -23,5 +23,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = (unsigned int)ft_strlen((char *)s1);
 	while (len + 1 && ft_strchr(set, s1[len]))
 		len--;
-	return(ft_substr(s1, 0, len + 1));	
+	return (ft_substr(s1, 0, len + 1));
 }

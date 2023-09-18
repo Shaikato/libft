@@ -12,19 +12,20 @@
 
 #include <stdlib.h>
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char    *str;
-    char    *st;
-    str = malloc(len * sizeof(char));
-    st = str;
-    if (!str)
-        return (NULL);
-    while(len--)
-    {
-        *str = s[start];
-        start++;
-        str++;
-    }
-    return (st);
+	char	*str;
+	char	*st;
+
+	str = malloc(len * sizeof(char));
+	st = str;
+	if (!str)
+		return (NULL);
+	while (len--)
+	{
+		*str = s[start];
+		start++;
+		str++;
+	}
+	return (st);
 }

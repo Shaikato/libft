@@ -12,28 +12,28 @@
 
 #include <stddef.h>
 
-char    *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-    char    *start;
-    char    *occ;
-    size_t  i;
+	char	*start;
+	char	*occ;
+	size_t	i;
 
-    start = (char *)little; 
-    while (*big)
-    {
-        i = len;
-        little = start;
-        if (*big == *little)
-        {
-            occ = (char *)big;
-            while (*big == *little && i--)
-            {
-                big++;
-                little++;
-            }
-            if (!(i--))
-                return (occ);
-        }
-    }
-    return (NULL);
+	start = (char *)little; 
+	while (*big)
+	{
+		i = len;
+		little = start;
+		if (*big == *little)
+		{
+			occ = (char *)big;
+			while (*big == *little && i--)
+			{
+				big++;
+				little++;
+			}
+			if (!(i--))
+				return (occ);
+		}
+	}
+	return (NULL);
 }

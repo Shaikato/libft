@@ -18,7 +18,7 @@ static unsigned int	ft_word_count(char const *s, char c)
 	unsigned int	i;
 
 	i = 0;
-	while(*s)
+	while (*s)
 	{
 		if (*s == c)
 			i++;
@@ -32,7 +32,7 @@ static unsigned int	ft_wordlen(char const *s, char c)
 	unsigned int	i;
 
 	i = 0;
-	while(*s != c && *s)
+	while (*s != c && *s)
 	{
 		i++;
 		s++;
@@ -82,9 +82,9 @@ char	**ft_split(char const *s, char c)
 	unsigned int	i;
 
 	if (!s)
-		return (NULL);	
+		return (NULL);
 	i = ft_word_count(s, c);
-	ptr = ft_calloc(i + 1, sizeof(char*));
+	ptr = ft_calloc(i + 1, sizeof(char *));
 	if (!ptr)
 		return (NULL);
 	while (*s == c)
