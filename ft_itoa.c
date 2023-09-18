@@ -53,11 +53,13 @@ char	*ft_itoa(int n)
 	unsigned int	len;
 	unsigned int	i;
 
+	if (n == -2147483648)
+		return (ft_min_handle());
 	len = (unsigned int)ft_nbrlen(n);
 	i = 0;
 	str = malloc(len * sizeof(char) + 1);
-	if (n == -2147483648)
-		return(ft_min_handle());
+	if (!str)
+		return (NULL);
 	if (n < 0)
 	{
 		len += 1;
