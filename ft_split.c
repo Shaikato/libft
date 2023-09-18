@@ -79,7 +79,7 @@ static char	**ft_lp(char const *s, char c, unsigned int i, char **pt)
 			s++;
 			y++;
 		}
-		while (*s == c && *s) 
+		while (*s == c && *s)
 			s++;
 		j++;
 	}
