@@ -20,8 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	str = malloc(((unsigned int)ft_strlen((char *)s1) +
-				(unsigned int)ft_strlen((char *)s2) + 1) * sizeof(char));
+	str = malloc(((unsigned int)ft_strlen((char *)s1)
+				+ (unsigned int)ft_strlen((char *)s2) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	start = str;
