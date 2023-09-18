@@ -47,7 +47,7 @@ static char	*ft_min_handle(void)
 	return (str);
 }
 
-static void	ft_loop(unsigned int len, unsigned int i, char *str)
+static void	ft_loop(unsigned int len, unsigned int i, int n,char *str)
 {
 	while (len > i)
 	{
@@ -78,7 +78,7 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		n = -n;
 	}
-	ft_loop(len, i, str);
+	ft_loop(len, i, n, str);
 	str[len] = 0;
 	return (str);
 }
