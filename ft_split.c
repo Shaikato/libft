@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 	char			**ptr;
 	unsigned int	i;
 
-	if (!s || c == '\0')
+	if (!s)
 		return (NULL);
 	while (*s == c)
 		s++;
