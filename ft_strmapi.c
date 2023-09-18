@@ -16,11 +16,11 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	int		n;
+	size_t	n;
 
 	if (!s || !f)
 		return (NULL);
-	n = ft_strlen(s);
+	n = (size_t)ft_strlen((char *)s);
 	str = (char *)ft_calloc(n + 1, sizeof(*str));
 	if (!str)
 		return (NULL);
