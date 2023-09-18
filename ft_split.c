@@ -26,7 +26,6 @@ static unsigned int	ft_word_count(char const *s, char c)
 			while (*s == c)
 				s++;
 		}
-
 		s++;
 	}
 	return (i);
