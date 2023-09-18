@@ -27,6 +27,26 @@ static int	ft_nbrlen(int n)
 	return (i + 1);
 }
 
+char	*ft_min_handle(void)
+{
+	char	*str;
+
+	str = malloc(12 * sizeof(char));
+	str[0] = '-';
+	str[1] = '2';
+	str[2] = '1';
+	str[3] = '4';
+	str[4] = '7';
+	str[5] = '4';
+	str[6] = '8';
+	str[7] = '3';
+	str[8] = '6';
+	str[9] = '4';
+	str[10] = '8';
+	str[11] = 0;
+	return (str);
+}
+
 char	*ft_itoa(int n)
 {
 	char			*str;
@@ -37,7 +57,7 @@ char	*ft_itoa(int n)
 	i = 0;
 	str = malloc(len * sizeof(char) + 1);
 	if (n == -2147483648)
-		return ("-2147483648");
+		return(ft_min_handle());
 	if (n < 0)
 	{
 		len += 1;
