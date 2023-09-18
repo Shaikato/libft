@@ -14,16 +14,20 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	unsigned char	ch;
-	char			*occ;
+	char	ch;
+	char	*occ;
 
-	ch = (unsigned char)c;
+	ch = (char)c;
+	if (!str)
+		return (NULL);
 	while (*str)
 	{
 		if (*str == ch)
 			occ = (char *)str;
 		str++;
 	}
+	if (*str == ch)
+		return ((char *)str);
 	if (occ != NULL)
 		return (occ);
 	else

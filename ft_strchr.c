@@ -20,5 +20,7 @@ char	*ft_strchr(const char *str, int c)
 	while (*str)
 		if (*str++ == ch)
 			return ((char *)str - 1);
+	if (*str == ch)
+		return ((char *)str);
 	return (NULL);
 }

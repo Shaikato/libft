@@ -6,7 +6,7 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:15:04 by randre            #+#    #+#             */
-/*   Updated: 2023/09/18 18:59:13 by randre           ###   ########.fr       */
+/*   Updated: 2023/09/18 19:35:32 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 
 	s1 = (unsigned char *)str1;
 	s2 = (unsigned char *)str2;
+	if (!s1 || !s2)
+		return (NULL);
 	if (s1 < s2)
 		while (n--)
 			*s1++ = *s2++;
