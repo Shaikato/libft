@@ -15,7 +15,7 @@ int	ft_atoi(const char *str)
 	int	nbr_minu;
 	int	res;
 
-	while (*str == '\n' || *str == '\t' || *str == ' ' || 
+	while (*str == '\n' || *str == '\t' || *str == ' ' ||
 		*str == '\f' || *str == '\v' || *str == '\r')
 		str++;
 	if (*str == '+' || *str == '-')
