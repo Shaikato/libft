@@ -47,7 +47,7 @@ static char	*ft_min_handle(void)
 	return (str);
 }
 
-static void	ft_loop(unsigned int len, unsigned int i, int n,char *str)
+static void	ft_loop(unsigned int len, unsigned int i, int n, char *str)
 {
 	while (len > i)
 	{
