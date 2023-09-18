@@ -57,12 +57,13 @@ char	*ft_itoa(int n)
 		return (ft_min_handle());
 	len = (unsigned int)ft_nbrlen(n);
 	i = 0;
+	if (n < 0)
+		len++;
 	str = malloc(len * sizeof(char) + 1);
 	if (!str)
 		return (NULL);
 	if (n < 0)
 	{
-		len += 1;
 		i = 1;
 		str[0] = '-';
 		n = -n;
