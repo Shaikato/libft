@@ -3,3 +3,4 @@
 .vscode/launch.json
 a.exe
 build/Debug/outDebug.exe
+main.c
