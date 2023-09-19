@@ -24,6 +24,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		buff = *lst;
 		*lst = (*lst)->next;
 		del(buff->content);
-		free(buff->content);
+		free(buff);
 	}
 }
