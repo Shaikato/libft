@@ -19,12 +19,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (len > ft_strlen(s) - start + 1)
+	{
 		len = ft_strlen(s) - start;
+		str = ft_calloc(len + 1, sizeof(char));
+	}
+	else
+	{
+		str = ft_calloc(len, sizeof(char));
+	}
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
 	if (len == 0)
 		return (ft_strdup(""));
-	str = ft_calloc(len + 1, sizeof(char));
+	
 	if (!str)
 		return (NULL);
 	return (ft_memcpy(str, s + start, len));
