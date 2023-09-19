@@ -32,6 +32,8 @@ static char	*ft_min_handle(void)
 	char	*str;
 
 	str = malloc(12 * sizeof(char));
+	if (!str)
+		return (NULL);
 	str[0] = '-';
 	str[1] = '2';
 	str[2] = '1';
