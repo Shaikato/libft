@@ -18,21 +18,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	char	*st;
 
-	str = malloc((len + 1) * sizeof(char));
-	st = str;
+	str = ft_calloc((len + 1), sizeof(char));
 	if (!str)
 		return (NULL);
 	if (start > (unsigned int)ft_strlen((char *)s) - 1)
-	{
-		free(str);
 		return (NULL);
-	}
-	while (len--)
-	{
-		*str = s[start];
-		start++;
-		str++;
-	}
-	*str = 0;
-	return (st);
+	return (ft_memcpy(str, s + start, len));
 }
