@@ -6,7 +6,7 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 21:43:48 by randre            #+#    #+#             */
-/*   Updated: 2023/09/16 21:43:48 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/16 16:18:37 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	ft_atoi(const char *str)
 	while (*str == '\n' || *str == '\t' || *str == ' '
 		|| *str == '\f' || *str == '\v' || *str == '\r')
 		str++;
+	nbr_minu = 0;
 	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')

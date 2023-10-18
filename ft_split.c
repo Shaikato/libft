@@ -6,7 +6,7 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 10:48:21 by randre            #+#    #+#             */
-/*   Updated: 2023/09/18 10:48:21 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/16 16:18:41 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ static unsigned int	ft_word_count(char const *s, char c)
 			if (*s)
 				i++;
 		}
-		s++;
+		if (*s)
+			s++;
 	}
 	return (i);
 }
