@@ -6,7 +6,7 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 21:43:48 by randre            #+#    #+#             */
-/*   Updated: 2023/10/20 20:49:28 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/20 20:59:29 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		val = 10;
+		val *= 10;
 		val += *str - '0';
 		str++;
 		if (val > LLONG_MAX && i > 0)
