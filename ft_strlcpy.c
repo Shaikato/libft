@@ -6,11 +6,10 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 22:45:28 by randre            #+#    #+#             */
-/*   Updated: 2023/09/16 22:45:28 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/16 12:11:24 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

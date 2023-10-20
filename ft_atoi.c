@@ -6,33 +6,38 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 21:43:48 by randre            #+#    #+#             */
-/*   Updated: 2023/10/16 16:18:37 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/20 20:49:28 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <limits.h>
+
 int	ft_atoi(const char *str)
 {
-	int	nbr_minu;
-	int	res;
+	int						i;
+	unsigned long long		val;
 
-	while (*str == '\n' || *str == '\t' || *str == ' '
-		|| *str == '\f' || *str == '\v' || *str == '\r')
+	i = 1;
+	val = 0;
+	while (*str == '\t' || *str == '\n' || *str == '\v'
+		|| *str == '\f' || *str == '\r' || *str == ' ')
 		str++;
-	nbr_minu = 0;
 	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
-			nbr_minu = 1;
+			i = -1;
 		str++;
 	}
-	res = 0;
 	while (*str >= '0' && *str <= '9')
 	{
-		res *= 10;
-		res += *str - 48;
+		val = 10;
+		val += *str - '0';
 		str++;
+		if (val > LLONG_MAX && i > 0)
+			return (-1);
+		if (val > LLONG_MAX && i < 0)
+			return (0);
 	}
-	if (nbr_minu == 1)
-		res = -res;
-	return (res);
+	return (val * i);
 }

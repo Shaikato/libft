@@ -6,11 +6,10 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:15:04 by randre            #+#    #+#             */
-/*   Updated: 2023/09/18 19:46:41 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/16 12:10:53 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memmove(void *str1, const void *str2, size_t n)

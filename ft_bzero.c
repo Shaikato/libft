@@ -6,12 +6,11 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:13:33 by randre            #+#    #+#             */
-/*   Updated: 2023/09/15 06:18:09 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/16 12:09:47 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	ft_bzero(void *dst, size_t n)
 {
