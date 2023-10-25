@@ -6,7 +6,7 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 23:21:26 by randre            #+#    #+#             */
-/*   Updated: 2023/10/25 14:14:54 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/25 14:59:24 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,15 @@ void	*ft_calloc(size_t nitems, size_t size)
 	size_t	res;
 
 	res = nitems * size;
-	if (res / size != nitems)
-		return (NULL);
-	ptr = malloc(nitems * size);
+	ptr = NULL;
+	if (res != 0 && size != 0)
+	{
+		if (res / size != nitems)
+			return (NULL);
+	}
+	if (res == 0 || size == 0)
+		res = 0;
+	ptr = malloc(res);
 	if (ptr)
 	{
 		ft_bzero(ptr, nitems * size);
