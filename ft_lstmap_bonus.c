@@ -6,7 +6,7 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 19:37:50 by randre            #+#    #+#             */
-/*   Updated: 2023/09/19 19:37:50 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/24 13:52:18 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*lnew;
 	t_list	*new;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	lnew = NULL;
 	while (lst)

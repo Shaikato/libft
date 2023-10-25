@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 19:34:35 by randre            #+#    #+#             */
-/*   Updated: 2023/09/19 19:34:35 by randre           ###   ########.fr       */
+/*   Created: 2023/09/19 19:29:25 by randre            #+#    #+#             */
+/*   Updated: 2023/10/25 14:19:48 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (!lst)
+	t_list	*buff;
+
+	if (!lst || !del)
 		return ;
-	while (lst->next)
+	while (*lst)
 	{
-		f(lst->content);
-		lst = lst->next;
+		buff = *lst;
+		*lst = (*lst)->next;
+		del(buff->content);
+		free(buff);
 	}
-	f(lst->content);
-	lst = lst->next;
 }

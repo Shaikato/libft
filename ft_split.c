@@ -6,7 +6,7 @@
 /*   By: randre <randre@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 10:48:21 by randre            #+#    #+#             */
-/*   Updated: 2023/09/18 10:48:21 by randre           ###   ########.fr       */
+/*   Updated: 2023/10/24 13:45:57 by randre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static unsigned int	ft_word_count(char const *s, char c)
 {
 	unsigned int	i;
 
-	while (*s == c)
+	while (*s == c && *s)
 		s++;
 	if (*s)
 		i = 1;
@@ -25,14 +25,15 @@ static unsigned int	ft_word_count(char const *s, char c)
 		i = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == c && *s)
 		{
-			while (*s == c)
+			while (*s == c && *s)
 				s++;
 			if (*s)
 				i++;
 		}
-		s++;
+		if (*s)
+			s++;
 	}
 	return (i);
 }
@@ -100,5 +101,7 @@ char	**ft_split(char const *s, char c)
 	if (!ptr)
 		return (NULL);
 	ptr = ft_lp(s, c, i, ptr);
+	if (!ptr)
+		return (NULL);
 	return (ptr);
 }
